@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block css %}
+
+
+{%endblock%}
+
+{% block content %}
+<section id="b" class="boldSection btDivider topSemiSpaced bottomSemiSpaced btDarkSkin gutter inherit wBackground cover" style="background-color:#bc2331; background-image:url('https://allindiaroundup.com/wp-content/uploads/2019/05/World-Blood-Donor-Day-2018-1170x677.png'); background-size:100% 100%;padding-top: 400px !important;background-position: 50% ;">
+  
+</section>
+
+    <div class="container-fluid" style="background-color:#bc2331; background-image:url('https://cdn.wallpapersafari.com/26/71/j41Ei5.jpg'); background-size:100% 100%;padding-top: 100px !important;padding-bottom: 100px !important;background-position: 50% ;">
+        <div class="form_body ">
+            <h2 class="text-center font-">Blood Donor Registration Form</h2>
+            <form action="{% url 'dregdisplay' %}" method="post">
+                {% csrf_token %}
+                {{forms.as_p}}
+                <button type="submit" class="btn reg_btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock  %}
